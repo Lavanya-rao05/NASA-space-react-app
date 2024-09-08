@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import AstronomyPicture from './AstronomyPicture';
+import Sidebar from './sidebar';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="image-container">
+        <AstronomyPicture onData={setData} />
+      </div>
+      {data && (
+        <Sidebar
+          title={data.title}
+          description={data.explanation}
+        />
+      )}
     </div>
   );
 }
