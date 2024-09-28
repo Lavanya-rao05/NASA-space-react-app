@@ -9,3 +9,5 @@ A web application that uses the NASA API to display space-related data, such as 
 - Displays NASA’s Astronomy Picture of the Day (APOD)
 - Fetches and shows detailed information about the image
 - Responsive design and user-friendly interface
+
+DEMO : https://nasa-space-react-app.netlify.app/
